@@ -89,7 +89,7 @@
     "prebuild": "run-s --silent depcheck",
     "features": "node scripts/export-supported-features-cli.js > supported-features.json",
     "defs": "node scripts/export-service-definitions-cli.js > service-definitions.yml",
-    "build": "run-s defs features",
+    "build": "run-s defs features next build",
     "start:server:prod": "node server",
     "now-start": "npm run start:server:prod",
     "start:server:e2e-on-build": "node server 8080",
