@@ -93,11 +93,11 @@
     "start:server:prod": "node server",
     "now-start": "npm run start:server:prod",
     "start:server:e2e-on-build": "node server 8080",
-    "start:server": "cross-env NODE_CONFIG_ENV=development nodemon server 80",
+    "start:server": "cross-env NODE_CONFIG_ENV=development nodemon server 8080",
     "debug:server": "cross-env NODE_CONFIG_ENV=development nodemon --inspect server.js 8080",
     "prestart": "npm run start:server",
     "start": "concurrently --names server\"npm run start:server\"",
-    "e2e": "start-server-and-test start http://localhost:80 test:e2e",
+    "e2e": "start-server-and-test start http://localhost:8080 test:e2e",
     "e2e-on-build": "cross-env CYPRESS_baseUrl=http://localhost:8080 start-server-and-test start:server:e2e-on-build http://localhost:8080 test:e2e",
     "badge": "cross-env NODE_CONFIG_ENV=test TRACE_SERVICES=true node scripts/badge-cli.js",
     "build-docs": "rimraf api-docs/ && jsdoc --pedantic -c ./jsdoc.json ."
