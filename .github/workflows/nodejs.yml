@@ -13,6 +13,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
          node-version: 12
+         npm-version: 5
     - name: npm install, build, and test
       run: |
         npm ci
